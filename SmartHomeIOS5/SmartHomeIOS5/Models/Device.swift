@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Device {
+class Device: Codable {
     
     var name: String
     var isOn: Bool

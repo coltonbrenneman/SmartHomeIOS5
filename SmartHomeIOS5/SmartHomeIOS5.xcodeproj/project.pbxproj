@@ -14,6 +14,8 @@
 		441E1F422A30FB4A003A20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F402A30FB4A003A20D9 /* LaunchScreen.storyboard */; };
 		44FA4E042A310AD900061F12 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E032A310AD900061F12 /* Device.swift */; };
 		44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E082A310AFF00061F12 /* DeviceController.swift */; };
+		44FA4E0C2A3111C700061F12 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */; };
+		44FA4E0E2A31130800061F12 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		441E1F432A30FB4A003A20D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44FA4E032A310AD900061F12 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		44FA4E082A310AFF00061F12 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
+		44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
+		44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		44FA4E052A310ADF00061F12 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				44FA4E0A2A3111A700061F12 /* ViewControllers */,
 				44FA4E062A310AE600061F12 /* ModelControllers */,
 			);
 			path = Controllers;
@@ -108,6 +113,15 @@
 				44FA4E082A310AFF00061F12 /* DeviceController.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		44FA4E0A2A3111A700061F12 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */,
+				44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FA4E042A310AD900061F12 /* Device.swift in Sources */,
+				44FA4E0E2A31130800061F12 /* DeviceTableViewCell.swift in Sources */,
 				44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */,
+				44FA4E0C2A3111C700061F12 /* DevicesTableViewController.swift in Sources */,
 				441E1F362A30FB48003A20D9 /* AppDelegate.swift in Sources */,
 				441E1F382A30FB48003A20D9 /* SceneDelegate.swift in Sources */,
 			);

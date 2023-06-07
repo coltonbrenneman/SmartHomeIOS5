@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		441E1F362A30FB48003A20D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F352A30FB48003A20D9 /* AppDelegate.swift */; };
 		441E1F382A30FB48003A20D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F372A30FB48003A20D9 /* SceneDelegate.swift */; };
-		441E1F3A2A30FB48003A20D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F392A30FB48003A20D9 /* ViewController.swift */; };
 		441E1F3D2A30FB48003A20D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F3B2A30FB48003A20D9 /* Main.storyboard */; };
 		441E1F3F2A30FB4A003A20D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F3E2A30FB4A003A20D9 /* Assets.xcassets */; };
 		441E1F422A30FB4A003A20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F402A30FB4A003A20D9 /* LaunchScreen.storyboard */; };
+		44FA4E042A310AD900061F12 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E032A310AD900061F12 /* Device.swift */; };
+		44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E082A310AFF00061F12 /* DeviceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		441E1F322A30FB48003A20D9 /* SmartHomeIOS5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHomeIOS5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441E1F352A30FB48003A20D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		441E1F372A30FB48003A20D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		441E1F392A30FB48003A20D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		441E1F3C2A30FB48003A20D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		441E1F3E2A30FB4A003A20D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441E1F412A30FB4A003A20D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441E1F432A30FB4A003A20D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44FA4E032A310AD900061F12 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		44FA4E082A310AFF00061F12 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		441E1F342A30FB48003A20D9 /* SmartHomeIOS5 */ = {
 			isa = PBXGroup;
 			children = (
-				441E1F352A30FB48003A20D9 /* AppDelegate.swift */,
-				441E1F372A30FB48003A20D9 /* SceneDelegate.swift */,
-				441E1F392A30FB48003A20D9 /* ViewController.swift */,
-				441E1F3B2A30FB48003A20D9 /* Main.storyboard */,
-				441E1F3E2A30FB4A003A20D9 /* Assets.xcassets */,
-				441E1F402A30FB4A003A20D9 /* LaunchScreen.storyboard */,
-				441E1F432A30FB4A003A20D9 /* Info.plist */,
+				44FA4E052A310ADF00061F12 /* Controllers */,
+				441E1F4B2A310AAE003A20D9 /* Models */,
+				441E1F4A2A30FBA9003A20D9 /* Storyboards */,
+				441E1F492A30FB84003A20D9 /* SupportingFiles */,
 			);
 			path = SmartHomeIOS5;
+			sourceTree = "<group>";
+		};
+		441E1F492A30FB84003A20D9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F3E2A30FB4A003A20D9 /* Assets.xcassets */,
+				441E1F432A30FB4A003A20D9 /* Info.plist */,
+				441E1F352A30FB48003A20D9 /* AppDelegate.swift */,
+				441E1F372A30FB48003A20D9 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		441E1F4A2A30FBA9003A20D9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F3B2A30FB48003A20D9 /* Main.storyboard */,
+				441E1F402A30FB4A003A20D9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		441E1F4B2A310AAE003A20D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44FA4E032A310AD900061F12 /* Device.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44FA4E052A310ADF00061F12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44FA4E062A310AE600061F12 /* ModelControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44FA4E062A310AE600061F12 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44FA4E082A310AFF00061F12 /* DeviceController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441E1F3A2A30FB48003A20D9 /* ViewController.swift in Sources */,
+				44FA4E042A310AD900061F12 /* Device.swift in Sources */,
+				44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */,
 				441E1F362A30FB48003A20D9 /* AppDelegate.swift in Sources */,
 				441E1F382A30FB48003A20D9 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartHomeIOS5/Info.plist;
+				INFOPLIST_FILE = SmartHomeIOS5/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SmartHomeIOS5/Info.plist;
+				INFOPLIST_FILE = SmartHomeIOS5/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

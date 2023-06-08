@@ -23,7 +23,7 @@ class DeviceTableViewCell: UITableViewCell {
     // MARK: - Functions
     func updateUI(device: Device) {
         deviceTextLabel.text = device.name
-        
+        isOnSwitch.isOn = device.isOn
     }
     
     // MARK: - Actions

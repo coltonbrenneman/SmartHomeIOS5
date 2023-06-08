@@ -16,6 +16,8 @@
 		44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E082A310AFF00061F12 /* DeviceController.swift */; };
 		44FA4E0C2A3111C700061F12 /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */; };
 		44FA4E0E2A31130800061F12 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */; };
+		44FA4E142A32554700061F12 /* ToggleAllDevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E132A32554700061F12 /* ToggleAllDevicesViewController.swift */; };
+		44FA4E162A32562500061F12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA4E152A32562500061F12 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		44FA4E082A310AFF00061F12 /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 		44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
 		44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		44FA4E132A32554700061F12 /* ToggleAllDevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAllDevicesViewController.swift; sourceTree = "<group>"; };
+		44FA4E152A32562500061F12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		441E1F492A30FB84003A20D9 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				44FA4E152A32562500061F12 /* Constants.swift */,
 				441E1F3E2A30FB4A003A20D9 /* Assets.xcassets */,
 				441E1F432A30FB4A003A20D9 /* Info.plist */,
 				441E1F352A30FB48003A20D9 /* AppDelegate.swift */,
@@ -120,6 +125,7 @@
 			children = (
 				44FA4E0B2A3111C700061F12 /* DevicesTableViewController.swift */,
 				44FA4E0D2A31130800061F12 /* DeviceTableViewCell.swift */,
+				44FA4E132A32554700061F12 /* ToggleAllDevicesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -197,10 +203,12 @@
 			files = (
 				44FA4E042A310AD900061F12 /* Device.swift in Sources */,
 				44FA4E0E2A31130800061F12 /* DeviceTableViewCell.swift in Sources */,
+				44FA4E142A32554700061F12 /* ToggleAllDevicesViewController.swift in Sources */,
 				44FA4E092A310AFF00061F12 /* DeviceController.swift in Sources */,
 				44FA4E0C2A3111C700061F12 /* DevicesTableViewController.swift in Sources */,
 				441E1F362A30FB48003A20D9 /* AppDelegate.swift in Sources */,
 				441E1F382A30FB48003A20D9 /* SceneDelegate.swift in Sources */,
+				44FA4E162A32562500061F12 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

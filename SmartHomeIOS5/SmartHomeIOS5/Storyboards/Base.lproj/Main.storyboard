@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="n1o-jg-r0k" id="xmT-Ps-SIG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="2mH-5D-rfL"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" id="2mH-5D-rfL"/>
                     <navigationItem key="navigationItem" title="Smart Home" id="gw8-8a-j8c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bfM-mH-0fd">
                             <connections>
@@ -81,18 +81,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="n1o-jg-r0k" kind="relationship" relationship="viewControllers" id="dhm-Mx-5SV"/>
-                        <segue destination="EKQ-7m-KSV" kind="relationship" relationship="viewControllers" id="qFt-iY-eAc"/>
+                        <segue destination="EKQ-7m-KSV" kind="relationship" relationship="viewControllers" id="xUm-oV-SSE"/>
+                        <segue destination="fZB-e2-c5m" kind="relationship" relationship="viewControllers" id="w6g-fs-WJF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bfj-9m-5cf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-411" y="432"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Bedroom-->
         <scene sceneID="LC6-iY-iTM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fZB-e2-c5m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bedroom" image="house" catalog="system" id="yXl-AG-LTm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wew-QD-adc">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -107,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="458.77862595419845" y="15.492957746478874"/>
         </scene>
-        <!--Item-->
+        <!--All-->
         <scene sceneID="LRc-3Y-JpM">
             <objects>
-                <viewController id="EKQ-7m-KSV" sceneMemberID="viewController">
+                <viewController id="EKQ-7m-KSV" customClass="ToggleAllDevicesViewController" customModule="SmartHomeIOS5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wpR-r5-ZGq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,11 +123,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="44.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Turn All On"/>
+                                        <connections>
+                                            <action selector="turnAllOnButtonTapped:" destination="EKQ-7m-KSV" eventType="touchUpInside" id="3A0-fq-deM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-MV-6Zy">
                                         <rect key="frame" x="0.0" y="74.666666666666686" width="314.33333333333331" height="44.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Turn All Off"/>
+                                        <connections>
+                                            <action selector="turnAllOffButtonTapped:" destination="EKQ-7m-KSV" eventType="touchUpInside" id="anT-H0-cRH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -140,17 +147,16 @@
                             <constraint firstItem="uoN-mT-zFK" firstAttribute="width" secondItem="wpR-r5-ZGq" secondAttribute="width" multiplier="0.8" id="x5r-26-DlM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="g3f-Hd-H8r"/>
+                    <tabBarItem key="tabBarItem" title="All" image="lightbulb" catalog="system" id="g3f-Hd-H8r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVr-S1-aNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="680"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dhm-Mx-5SV"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="lightbulb" catalog="system" width="92" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

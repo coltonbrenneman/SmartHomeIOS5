@@ -12,6 +12,8 @@ class DevicesTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notificationCenter()
     }
 
     // MARK: - Actions
@@ -24,7 +26,6 @@ class DevicesTableViewController: UITableViewController {
         return DeviceController.sharedInstance.devices.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as? DeviceTableViewCell else { return UITableViewCell() }
 
@@ -34,20 +35,25 @@ class DevicesTableViewController: UITableViewController {
 
         return cell
     }
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-    
+   
     // MARK: - Functions
+    func notificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDevicesOn), name: Constants.Notifications.allDevicesOn, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(turnAllDeviceOff), name: Constants.Notifications.allDevicesOff, object: nil)
+    }
+    
+    @objc func turnAllDevicesOn() {
+        print("idk")
+        DeviceController.sharedInstance.toggleAllDevicesOn()
+        tableView.reloadData()
+    }
+    
+    @objc func turnAllDeviceOff() {
+        print("i do know ")
+        DeviceController.sharedInstance.toggleAllDevicesOff()
+        tableView.reloadData()
+    }
+    
     func presentAlertController() {
         let alertController = UIAlertController(title: "New Device Name", message: "Enter the name of your device below", preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -65,17 +71,6 @@ class DevicesTableViewController: UITableViewController {
         alertController.addAction(confirmAction)
         present(alertController, animated: true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 } //End of class
 
 // MARK: - Extensions

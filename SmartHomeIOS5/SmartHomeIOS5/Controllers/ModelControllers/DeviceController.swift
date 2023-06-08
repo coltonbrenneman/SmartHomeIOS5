@@ -24,12 +24,18 @@ class DeviceController {
         save()
     }
     
-    func deleteDevice() {
-        
-    }
-    
     func switchIsOn(device: Device) {
         device.isOn.toggle()
+        save()
+    }
+    
+    func toggleAllDevicesOn() {
+        devices.forEach { $0.isOn = true }
+        save()
+    }
+    
+    func toggleAllDevicesOff() {
+        devices.forEach { $0.isOn = false }
         save()
     }
     
